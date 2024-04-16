@@ -92,7 +92,7 @@ const topObjs = [
   },
 ];
 
-// Event listener to the latest objects
+// Event listener to the latest button
 
 latestBtn.addEventListener("click", (e) => {
   topBtn.classList.remove("active");
@@ -105,7 +105,7 @@ latestBtn.addEventListener("click", (e) => {
   }
 });
 
-// Event Listener to the featured objects
+// Event Listener to the featured button
 
 featuredBtn.addEventListener("click", (e) => {
   topBtn.classList.remove("active");
@@ -118,7 +118,7 @@ featuredBtn.addEventListener("click", (e) => {
   }
 });
 
-// Event listener to the top food section
+// Event listener to the top button
 
 topBtn.addEventListener("click", (e) => {
   featuredBtn.classList.remove("active");
@@ -130,3 +130,5 @@ topBtn.addEventListener("click", (e) => {
     productPrices[i].textContent = `${topObjs[i]["price"]}`;
   }
 });
+
+// Adding feature to show modal whenever image got clicked
