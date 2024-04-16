@@ -235,7 +235,8 @@ body {
   margin-left: 1rem;
   cursor: pointer;
 }
-.product-btns button:nth-child(1) {
+/* .product-btns button:nth-child(1)*/
+.active {
   background-color: rgb(182, 115, 82);
   color: #fff;
 }
@@ -291,7 +292,7 @@ body {
 }
 
 .price-bar p {
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgb(236, 177, 89);
 }
 
