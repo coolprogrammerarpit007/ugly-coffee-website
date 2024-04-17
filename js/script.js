@@ -131,4 +131,56 @@ topBtn.addEventListener("click", (e) => {
   }
 });
 
+// *******************************
+// *******************************
+
+// SHOW MODAL
+
 // Adding feature to show modal whenever image got clicked
+
+const gridImgs = document.querySelectorAll(".img");
+
+// storing imgs in a JSON DATA
+
+const gridImgObject = [];
+gridImgs.forEach((img, index) => {
+  gridImgObject.push({
+    id: index,
+    Img: `${img.src}`,
+  });
+});
+
+// Adding the event listener to the gridImgs
+
+gridImgs.forEach((img, i) => {
+  img.addEventListener("click", (e) => {
+    // creating a image element
+    const img = document.createElement("img");
+
+    // getting the src for the image element from the JSON Object.
+    img.src = `${gridImgObject[i]["Img"]}`;
+
+    // Acessing the modal div and appending img to it.
+    document.getElementById(`modal-${i}`).appendChild(img);
+
+    // removing hide class from the modal element
+    document.getElementById(`modal-${i}`).classList.remove("modal-hide");
+
+    // Applying event listener to the close button.
+
+    // Getting acess to the close button.
+    const closeBtn = document.getElementById(`close-btn-${i}`);
+
+    // Adding event listener to the close button
+
+    closeBtn.addEventListener("click", (e) => {
+      // finding the parent element of the child element.
+      const parentEl = closeBtn.parentElement;
+      // removing child element from the parent
+      parentEl.removeChild(img);
+
+      // Adding the hidden class back to the image
+      parentEl.classList.add("modal-hide");
+    });
+  });
+});

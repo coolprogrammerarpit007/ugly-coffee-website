@@ -469,3 +469,44 @@ body {
   color: #fff;
   background-color: rgb(144, 52, 52);
 }
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 1rem;
+  width: 30%; /* Full width */
+  height: 50%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.modal img {
+  width: 30%;
+  height: auto;
+}
+/* Styling the modal  */
+.modal-hide {
+  display: none;
+}
+
+.close-btn {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(181, 193, 142);
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  transition: all 0.7s;
+}
+
+.close-btn:hover {
+  border: 1px solid rgb(181, 193, 142);
+  background-color: #fff;
+  color: rgb(181, 193, 142);
+}
